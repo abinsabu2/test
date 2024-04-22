@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love You Animation</title>
+<style>
+  .container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+  }
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: heartbeat 1s infinite alternate;
+  }
+  .text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: red;
+    font-family: Arial, sans-serif;
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart"></div>
+    <div class="text">Love You, Sreedev!</div>
+  </div>
+</body>
+</html>
